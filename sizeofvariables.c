@@ -3,8 +3,11 @@
 int main()
 {
   int a = 545;
+  float b = 3.1415;
+  char c = 'q';
+  double d = 1892.80365;
 
-  // print value and size of an int variable
-  printf("int a value: %d and size: %d bytes\n", a, sizeof(a));
+  // print size of main types of variables
+  printf("Var a has a size of %d bytes\nVar b has a size of %d bytes\nVar c has a size of %d\nVar d has a size of %d\n", sizeof(a), sizeof(b), sizeof(c), sizeof(d));
 }
 
