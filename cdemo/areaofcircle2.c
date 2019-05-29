@@ -8,13 +8,30 @@ float areaofcircle (float r, float a)
 
 int main(void) 
 {
-  //call areaofcircle
-  float i;
-  for (i=3.5; i<=12.5; i++)
-  {
-    float r = i;
-    float a;
-    a = areaofcircle(r, a);
-    printf("The area of the circle is %f\n", a);
-  }
+ char input[256];
+ float lower;
+ float upper;
+ printf("What is the lower value of your range for the radius?\n");
+ while(1)
+{
+	fgets(input, 256, stdin);
+	if (sscanf(input, "%f", &lower) == 1) break;
+	printf("Not a valid value, please try again\n");
+}
+printf("What is the upper value of your range for the radius?\n");
+while (1)
+{
+	fgets(input, 256, stdin);
+	if (sscanf(input, "%f", &upper) == 1) break;
+	printf("Not a valid value, please try again\n");
+}
+
+//call area of circle
+float r;
+float a;
+for (r = lower; r <= upper; r++)
+{
+	a = areaofcircle(r, a);
+  printf("The area is %f\n", a);
+}
 }
