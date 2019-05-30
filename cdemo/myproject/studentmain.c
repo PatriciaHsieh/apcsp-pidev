@@ -6,7 +6,7 @@ int main()
 {
 	char input[50], first[50], last[50];
 	int numstud, age, studentid;
-  printf("How many students (up to 50) would you like to store?\n");
+	printf("How many students (up to 50) would you like to store?\n");
 	fgets(input, 30, stdin);
 	sscanf(input, "%d", &numstud);
 	struct Student student[50];
